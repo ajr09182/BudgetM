@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300&display=swap');
+.title{
+position: absolute;
+width: 1098px;
+height: 325px;
+left: 50px;
+top: -300px;
+z-index: 100;
+font-family: 'Oxanium', cursive;
+font-style: normal;
+font-weight: 400;
+font-size: 260px;
+line-height: 325px;
+/* identical to box height */
+color: #d65dbc;
+}
+.hero{
+  box-sizing: border-box;
+
+position: absolute;
+width: 1180px;
+height: 520px;
+left: 120px;
+top: 162px;
+
+background: rgba(35, 61, 164, 0.92);
+border-top: 1px solid #000000;
+box-shadow: 20px 20px 0px #000000;
+}
+.search{
+position: absolute;
+width: 794px;
+height: 42px;
+left: 323px;
+top: 335px;
+}
+.searchButton{
+  position: absolute;
+width: 68px;
+height: 31px;
+left: 1042px;
+top: 341px;
+padding: 8px;
+background: #EED15F;
+border-radius: 50px;
+font-family: "Graduate";
+font-size: 13px;
+font-weight: 400;
+line-height: 14px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+.card1{
+  position: absolute;
+width: 561px;
+height: 260px;
+left: 149px;
+top: 398px;
+
+background: #DF76C8;
+}
+.card2{
+  position: absolute;
+width: 561px;
+height: 260px;
+left: 710px;
+top: 398px;
+
+background: #EED15F;
+}
+.subtitle{
+position: absolute;
+width: 1171px;
+height: 27px;
+left: 149px;
+top: 680px;
+font-family: "Graduate";
+font-style: normal;
+font-weight: 400;
+font-size: 30px;
+line-height: 27px;
+letter-spacing: 0.06em;
+color: #AE5B5B;
+}
+.nomore{
+  position: absolute;
+width: 425px;
+height: 188px;
+left: 507px;
+top: 754px;
+
+font-family: 'Cute Font';
+font-style: normal;
+font-weight: 400;
+font-size: 150px;
+line-height: 188px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+
+border: 1px solid #000000;
+
+}

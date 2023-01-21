@@ -8,7 +8,7 @@ import searchresult from "../search.json"
 export default function searchPage() {
   const [search, setSearch] = useState('')
   const getStaticProps = async () => {
-    await fetch('./api/scrap', {
+    await fetch('https://ajr09182.github.io/budgetm/api/scrap', {
       method: "POST",
       body: JSON.stringify({ search}),
       headers: {

@@ -1,14 +1,13 @@
 import { Card, Image, Text, Badge, Button, Group, Grid, Anchor } from '@mantine/core';
-import Head from 'next/head'
-import { useState ,useEffect} from 'react';
+import { useState} from 'react';
 import styles from '../styles/Home.module.css'
 import searchresult from "../search.json"
 
 
 export default function searchPage() {
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState('');
   const getStaticProps = async () => {
-    await fetch('https://ajr09182.github.io/budgetm/api/scrap', {
+    await fetch('./api/scrap', {
       method: "POST",
       body: JSON.stringify({ search}),
       headers: {
@@ -21,16 +20,6 @@ export default function searchPage() {
     <>
       <div className={styles.searchwrap}>
       <div className={styles.search}>
-            {/* <select id='category' className={styles.category} >
-              <option value="none" style={{color:'white'}} selected disabled hidden>Select category
-              </option>
-              <option value="electronics" style={{color:'white'}}>Electronics 
-              </option>
-              <option value="fashion" style={{color:'white'}}>Fashion 
-              </option>
-              <option value="beauty" style={{color:'white'}}>Beauty
-              </option>
-            </select> */}
           <input id='search' value={search} type='text' placeholder='search' className={styles.searchbar} onChange={(e) => setSearch(e.target.value)} />
           <button id='submit' className={styles.searchbutton} type='submit' onClick={getStaticProps}>search</button>
         </div>

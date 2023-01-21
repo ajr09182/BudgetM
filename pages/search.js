@@ -1,6 +1,5 @@
-import { Card, Image, Text, Badge, Button, Group, Grid, Anchor } from '@mantine/core';
+import { Card, Image, Text, Badge, Button, Group, Grid, Anchor, Input} from '@mantine/core';
 import { useState} from 'react';
-import styles from '../styles/Home.module.css'
 import searchresult from "../search.json"
 
 
@@ -18,10 +17,10 @@ export default function SearchPage() {
    
   return (
     <>
-      <div className={styles.searchwrap}>
-      <div className={styles.search}>
-          <input id='search' value={search} type='text' placeholder='search' className={styles.searchbar} onChange={(e) => setSearch(e.target.value)} />
-          <button id='submit' className={styles.searchbutton} type='submit' onClick={getStaticProps}>search</button>
+      <div>
+      <div>
+          <Input id='search' value={search} type='text' placeholder='search' onChange={(e) => setSearch(e.target.value)} />
+          <Button id='submit'  type='submit' onClick={getStaticProps}>search</Button>
         </div>
       </div>
       <div>

@@ -15,12 +15,14 @@ export default function searchPage() {
       }
     })
   }
-   
+  function Search(search){
+    setSearch(search)
+   }
   return (
     <>
       <div className={styles.searchwrap}>
       <div className={styles.search}>
-          <input id='search' value={search} type='text' placeholder='search' className={styles.searchbar} onChange={(e) => setSearch(e.target.value)} />
+          <input id='search' value={search} type='text' placeholder='search' className={styles.searchbar} onChange={(e) => Search(e.target.value)} />
           <button id='submit' className={styles.searchbutton} type='submit' onClick={getStaticProps}>search</button>
         </div>
       </div>

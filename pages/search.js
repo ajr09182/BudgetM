@@ -4,8 +4,8 @@ import styles from '../styles/Home.module.css'
 import searchresult from "../search.json"
 
 
-export default function searchPage() {
-  const [search, setSearch] = useState('');
+export default function SearchPage() {
+  const [search, setSearch] = useState('')
   const getStaticProps = async () => {
     await fetch('./api/scrap', {
       method: "POST",
@@ -15,14 +15,12 @@ export default function searchPage() {
       }
     })
   }
-  function Search(search){
-    setSearch(search)
-   }
+   
   return (
     <>
       <div className={styles.searchwrap}>
       <div className={styles.search}>
-          <input id='search' value={search} type='text' placeholder='search' className={styles.searchbar} onChange={(e) => Search(e.target.value)} />
+          <input id='search' value={search} type='text' placeholder='search' className={styles.searchbar} onChange={(e) => setSearch(e.target.value)} />
           <button id='submit' className={styles.searchbutton} type='submit' onClick={getStaticProps}>search</button>
         </div>
       </div>
